@@ -10,7 +10,23 @@
       hi
       <h1>hello</h1>
       <button><a href="www.google.com"> google</a> </button>
+
+
+<button type="button" data-prototype-url="https://drive.google.com/drive/folders/1Uydpe13HG_HekDJ436jj66D62wkoVlUo">SMI 3</button>
+<button type="button" data-prototype-url="https://drive.google.com/drive/folders/1up_Ht85GujXL2CH03dM1kUAWVAAw8CKi">SMI 4</button>
+<button type="button" data-prototype-url="https://drive.google.com/drive/folders/1ji08TCdWwlndE5KvB6VqircU26ZLwNim">SMI 5</button>
+<button type="button" data-prototype-url="https://drive.google.com/drive/folders/1lHZJ7BlH6rSpCI6tcpmrqGf-p7WjlTJN">SMI 6</button>
     </main>
     <footer></footer>
+    <script type="text/javascript">
+      document.addEventListener('click', function (event) {
+  if (event.target.matches('[data-prototype-url]')) {
+    var button = event.target;
+    var buttonURL = button.getAttribute('data-prototype-url');
+    window.location.href = buttonURL;
+    console.log(button.textContent + ' clicked');
+  }
+}, false);
+    </script>
   </body>
 </html>
